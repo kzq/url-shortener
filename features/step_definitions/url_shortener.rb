@@ -2,8 +2,8 @@ Given(/^I am on the home page$/) do
   visit root_path
 end
 
-When(/^I provide a website (.*)$/) do |address|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I provide a website address (.*)$/) do |url|
+  fill_in 'url', with: url
 end
 
 Then(/^It should display the shortened version of the given (.*)$/) do |address|
