@@ -3,6 +3,7 @@ Feature: URL Shortener
   I like to shorten my URLs for long website addresses
   So that I can use them instead
   
+  @javascript
   Scenario: Getting short URLs
     Given I am on the home page
     When  I provide a website address http://www.google.co.uk

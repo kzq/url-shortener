@@ -4,7 +4,8 @@ end
 
 When(/^I provide a website address (.*)$/) do |url|
   fill_in 'url', with: url
-  submit_form("addUrlForm #addUrl")  
+  click_button('Add')
+  #page.save_screenshot('screen.png', full: true)
 end
 
 Then(/^It should display the shortened version of the given (.*)$/) do |address|
