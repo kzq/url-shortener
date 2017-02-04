@@ -5,11 +5,11 @@
   <div ng-controller="shortenerCtrl">
   	<div class="row">
   	  <div class="col-md-8">
-  	  	<form class="form-inline" ng-submit="addUrl()">
+  	  	<form class="form-inline" id="addUrlForm" ng-submit="addUrl()">
           <div class="form-group">
             <input type="text" class="form-control" name="url" placeholder="Add URL" ng-model="webAddressField.url" />
           </div>
-          <button type="submit" class="btn btn-primary">Add</button>
+          <button type="submit" id="addUrl" class="btn btn-primary">Add</button>
         </form>
   	  </div>	
   	</div>

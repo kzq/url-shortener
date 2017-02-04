@@ -4,6 +4,7 @@ end
 
 When(/^I provide a website address (.*)$/) do |url|
   fill_in 'url', with: url
+  submit_form("addUrlForm #addUrl")  
 end
 
 Then(/^It should display the shortened version of the given (.*)$/) do |address|
