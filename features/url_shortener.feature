@@ -5,9 +5,10 @@ Feature: URL Shortener
   
   Scenario: Getting short URLs
     Given I am on the home page
-    When I provide a website address
-    Then I should see the shortened version of the given address
+    When  I provide a website address
+    Then  It should display the shortened version of the given address
     
-  Scenario: Redirecting to short address
-    When I click on a short URL
-    Then I should be redirected to the original addrress   
+  Scenario: Redirecting to a short address
+    Given I have a short URl of the address
+    When  I click on a short URL
+    Then  I should be redirected to the original website address   
