@@ -1,12 +1,5 @@
 app.controller('shortenerCtrl', ['$scope', 'urlShortenerFactory', function($scope, urlShortenerFactory) {
-  
-  $scope.webAddresses = [
-    { url: 'http://www.google.co.uk', shortForm: 'localhost:300/12lk'},
-    { url: 'http://www.google.co.uk', shortForm: 'localhost:300/12lk'},
-    { url: 'http://www.google.co.uk', shortForm: 'localhost:300/12lk'},
-    { url: 'http://www.google.co.uk', shortForm: 'localhost:300/12lk'},
-    { url: 'http://www.google.co.uk', shortForm: 'localhost:300/12lk'}
-  ];
+  $scope.webAddresses = urlShortenerFactory.query();
   
   $scope.addUrl = function() {
     urlShortenerFactory.save($scope.webAddressUrl,

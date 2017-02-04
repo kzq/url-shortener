@@ -1,4 +1,4 @@
-class ShortenedUrlsController < ApplicationController
+class Api::ShortenedUrlsController < ApplicationController
   respond_to :json
   
   def index
