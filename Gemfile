@@ -28,7 +28,10 @@ gem 'puma', '~> 3.0'
 gem 'bower-rails'
 # Use angular crf to generate authenticity tokens for angular requests
 gem 'angular_rails_csrf'
-
+# Use shortener to short urls
+gem 'shortener'
+#Use responders to get default return with formats 
+gem 'responders'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
