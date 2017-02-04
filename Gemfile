@@ -53,6 +53,8 @@ end
 group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
+  gem 'poltergeist'
+  gem 'capybara-screenshot', :require => false # takes screenshots when test fails
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'vcr'
