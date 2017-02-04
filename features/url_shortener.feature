@@ -10,4 +10,4 @@ Feature: URL Shortener
     
   Scenario: Redirecting to short address
     When I click on a short URL
-    Them I should be redirected to the original addrress   
+    Then I should be redirected to the original addrress   
