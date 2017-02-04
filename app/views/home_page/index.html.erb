@@ -7,11 +7,30 @@
   	  <div class="col-md-8">
   	  	<form class="form-inline" ng-submit="addUrl()">
           <div class="form-group">
-            <input type="text" class="form-control" name="url" placeholder="Add URL" ng-model="webAddress.url" />
+            <input type="text" class="form-control" name="url" placeholder="Add URL" ng-model="webAddressField.url" />
           </div>
           <button type="submit" class="btn btn-primary">Add</button>
         </form>
   	  </div>	
   	</div>
+  	<div class="row"></div>
+  	<div class="row">
+      <div class="col-md-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="col-md-3">URL</th>
+              <th class="col-md-2">Short Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="webAddress in webAddresses">
+              <td>{{webAddress.url}}</td>
+              <td>{{webAddress.shortForm}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>	
 </div>
