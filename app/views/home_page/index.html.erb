@@ -20,13 +20,13 @@
           <thead>
             <tr>
               <th class="col-md-3">URL</th>
-              <th class="col-md-2">Short Form</th>
+              <th class="col-md-2">Short URL</th>
             </tr>
           </thead>
           <tbody>
             <tr ng-repeat="webAddress in webAddresses">
               <td>{{webAddress.url}}</td>
-              <td>{{webAddress.unique_key}}</td>
+              <td><a ng-href="{{webAddress.short_url}}">{{webAddress.short_url}}</a></td>
             </tr>
           </tbody>
         </table>
