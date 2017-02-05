@@ -3,25 +3,24 @@ Given(/^I am on the home page$/) do
 end
 
 When(/^I provide a website address (.*)$/) do |url|
-  fill_in 'url', with: url
-  click_button('Add')
-  #page.save_screenshot('screen.png', full: true)
-  expect(page).to have_content(url)
+  add_address(url)
 end
 
 Then(/^It should display the shortened version of (.*)$/) do |address|
-  shortened_url = ShortenedUrl.select("id,url,unique_key").find_by(url: "#{address}/")
-  expect(page).to have_content(shortened_url.unique_key)
+  shortened_url = ShortenedUrl.select("id,url,short_url").find_by(url: "#{address}/")
+  expect(page).to have_content(shortened_url.short_url)
 end
 
-Given(/^I have a short URl of the (.*)$/) do |address|
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/^I have a short URL of (.*)$/) do |address|
+  add_address(address)
+  short_url= find_short_url(address).text
+  expect(short_url).not_to eq('')
 end
 
-When(/^I click on a short (.*)$/) do |url|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I click on short link of (.*)$/) do |address|
+  find_short_url(address).find('a').click
 end
 
 Then(/^I should be redirected to the original (.*) address$/) do |website_address|
-  pending # Write code here that turns the phrase above into concrete actions
+  page.save_screenshot('screenshot3.png')
 end
