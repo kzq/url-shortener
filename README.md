@@ -19,6 +19,16 @@ Change database user details in database.yml or create new one as follows:
 create user urlshortener createdb createuser login password 'dbpass';
 ```
 
+**Bower Setup**
+
+First install Node.js if you don't have already.
+
+**Install Bower**
+
+```node
+  npm install -g bower
+```
+
 **Rails Setup**
 
 **Create New rails application**
@@ -27,6 +37,8 @@ create user urlshortener createdb createuser login password 'dbpass';
   rails new UrlShortener -T --database=postgresql
 
   bundle install
+  
+  bundle exec rake bower:install 
 ```
 
 **Create databases and run migrations**
