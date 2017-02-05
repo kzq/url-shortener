@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe ShortenedUrl, type: :model do
   before(:each) do
     @url = "http://www.google.co.uk/" 
-    @shortened_url = ShortenedUrl.generate_key @url   
+    @shortened_url = ShortenedUrl.generate(@url, "/")   
   end
   
   describe "validations" do
@@ -20,13 +20,13 @@ RSpec.describe ShortenedUrl, type: :model do
     
   end
   
-  describe "#generate_key" do
+  describe "#generate" do
     it "generates unique key for the given url" do
       expect(@shortened_url.unique_key).not_to be_nil
     end
     
     it "always keeps one key for the same URL" do
-      shortened_url = ShortenedUrl.generate_key @url
+      shortened_url = ShortenedUrl.generate @url, "/"
       expect(shortened_url.unique_key).to eq(@shortened_url.unique_key)
     end    
   end
