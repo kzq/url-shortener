@@ -16,8 +16,10 @@ RSpec.describe ShortenedUrl, type: :model do
     it { should validate_uniqueness_of(:unique_key) }
   end
   
-  it "prepends http to the url" do
-    
+  #TO DO
+  context "url scheme not given" do
+    it "prepends http to the url" do
+    end
   end
   
   describe "#generate" do
@@ -29,9 +31,5 @@ RSpec.describe ShortenedUrl, type: :model do
       shortened_url = ShortenedUrl.generate @url, "/"
       expect(shortened_url.unique_key).to eq(@shortened_url.unique_key)
     end    
-  end
-  
-  it "returns short form of the url" do
-    
   end
 end
