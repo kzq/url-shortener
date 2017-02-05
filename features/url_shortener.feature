@@ -7,7 +7,7 @@ Feature: URL Shortener
   Scenario: Getting short URLs
     Given I am on the home page
     When  I provide a website address http://www.google.co.uk
-    Then  It should display the shortened version of the given address
+    Then  It should display the shortened version of http://www.google.co.uk
     
   Scenario: Redirecting to a short address
     Given I have a short URl of the address
