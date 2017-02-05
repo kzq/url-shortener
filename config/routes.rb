@@ -6,7 +6,7 @@ Rails.application.routes.draw do
    root 'home_page#index'
    
    namespace :api do
-    resources :shortened_urls, only: [:index] do
+    resources :shortened_urls, only: [:index, :create] do
     end
    end
   # Example of regular route:
