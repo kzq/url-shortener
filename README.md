@@ -16,9 +16,7 @@ A RESTful Api to convert long URLs into short ones. Application uses Rails at ba
 
 Change database user details in database.yml or create new one as follows:
 ```postgresql
-# Create postgreSQL user
 create user urlshortener createdb createuser login password 'dbpass';
-# 
 ```
 
 **Rails Setup**
