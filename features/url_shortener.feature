@@ -15,4 +15,4 @@ Feature: URL Shortener
   Scenario: Redirecting to a short address
     Given I have a short URL of http://www.google.co.uk
     When  I click on short link of http://www.google.co.uk 
-    Then  I should be redirected to the original website address   
+    Then  I should be redirected to the original website http://www.google.co.uk   

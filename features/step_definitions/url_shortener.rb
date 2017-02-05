@@ -21,6 +21,8 @@ When(/^I click on short link of (.*)$/) do |address|
   find_short_url(address).find('a').click
 end
 
-Then(/^I should be redirected to the original (.*) address$/) do |website_address|
+Then(/^I should be redirected to the original website (.*)$/) do |address|
   page.save_screenshot('screenshot3.png')
+  expect(current_url).to eq("#{address}/")
+  #page.save_screenshot('screenshot3.png')
 end
