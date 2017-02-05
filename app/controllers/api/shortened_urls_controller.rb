@@ -7,9 +7,7 @@ class Api::ShortenedUrlsController < ApplicationController
   
   def create
     url = shortened_url_params[:url]
-    #shortened_url = ShortenedUrl.new(url)
-    #shortened_url.generate
-    shortened_url = Shortener::ShortenedUrl.generate(shortened_url_params[:url])
+    shortened_url = ShortenedUrl.generate_key url
     if shortened_url.save
       respond_with :api, shortened_url, status: :ok, location: api_shortened_urls_url
     else
