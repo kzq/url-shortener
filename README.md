@@ -12,11 +12,18 @@ A RESTful Api to convert long URLs into short ones. Application uses Rails at ba
 **Installation** 
 ===
 
+**Clone Repo**
+
+Clone or download the repository.
+```git
+  git clone https://github.com/kzq/url-shortener.git url-shortener   
+```
+
 **Database Setup**
 
 Change database user details in database.yml or create new one as follows:
 ```postgresql
-create user urlshortener createdb createuser login password 'dbpass';
+  create user urlshortener createdb createuser login password 'dbpass';
 ```
 
 **Bower Setup**
@@ -31,10 +38,8 @@ First install Node.js if you don't have already.
 
 **Rails Setup**
 
-**Create New rails application**
-
 ```rails
-  rails new UrlShortener -T --database=postgresql
+  #cd to rails application directory
 
   bundle install
   
